@@ -1,12 +1,14 @@
 # Write your code here.
 
+#1
 def hello():
     return "Hello!"
 
-
+#2
 def greet(name):
     return f"Hello, {name}!"
 
+#3
 def calc(a, b, operation = "multiply"):
     try:
         if operation == "add":
@@ -31,7 +33,7 @@ def calc(a, b, operation = "multiply"):
         return "You can't multiply those values!"
     
 
-
+#4
 def data_type_conversion(value, type):
     try:
         if type == "int":
@@ -44,6 +46,7 @@ def data_type_conversion(value, type):
         return f"You can't convert {value} into a {type}."
     
 
+#5
 def grade(*args):
     try:
         number_of_parametrs = len(args)
@@ -61,13 +64,17 @@ def grade(*args):
             return "F"
     except Exception:
         return "Invalid data was provided."
-    
+
+
+#6
 def repeat(string, count):
     result= ""
     for i in range(count):
         result += string
     return result
 
+
+#7
 def student_scores(mode, **kwargs):
     if mode == "mean":
         total= 0
@@ -84,6 +91,8 @@ def student_scores(mode, **kwargs):
                 best_name = name
         return best_name
 
+
+#8
 def titleize(text):
     small_words = ["a", "on", "an", "the", "of", "and", "is", "in"]
     words = text.split()
@@ -99,6 +108,8 @@ def titleize(text):
     return " ".join(words)
 
 
+
+#9
 def hangman(secret, guess):
     result = ""
     for letter in secret:
@@ -109,6 +120,7 @@ def hangman(secret, guess):
     return result
 
 
+#10
 def pig_latin(text):
     vowel = ["a", "e", "i", "o", "u"]
     words = text.split()
