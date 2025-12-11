@@ -1,0 +1,12 @@
+function: no_params
+positional parameters: none
+keyword parameters: none
+return None
+function: only_positional
+positional parameters: (1, 2, 3)
+keyword parameters: none
+return True
+function: only_keywords
+positional parameters: none
+keyword parameters: {'x': 10, 'y': 20}
+return <function logger_decorator at 0x105f19d20>
