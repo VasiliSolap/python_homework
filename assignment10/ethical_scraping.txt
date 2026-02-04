@@ -1,0 +1,78 @@
+1. Which sections of the website are restricted for crawling?
+Wikipedia’s robots.txt blocks many areas that are not regular article content.
+The main restricted sections include:
+
+    Administrative and internal system paths:   
+    /w/
+    /api/
+    /trap/
+
+    Special system pages:
+
+    /wiki/Special:
+    variations in different languages (Spezial, Spesial, etc.)
+
+    Deletion and moderation discussions:
+
+    /wiki/Wikipedia:Articles_for_deletion
+    /wiki/Wikipedia:Pages_for_deletion
+    /wiki/Wikipedia:Votes_for_deletion
+
+Similar “deletion”, “review”, and “discussion” pages in many languages
+
+User and admin-related areas:
+
+    User pages in some language versions
+    Administrator noticeboards
+    Arbitration and mediation pages
+    Abuse, spam, copyright investigation pages
+
+Spam and blacklist pages:
+
+    /wiki/MediaWiki:Spam-blacklist
+    /wiki/Wikipedia:WikiProject_Spam
+
+In general, Wikipedia allows bots to read encyclopedia articles, but restricts access to:
+
+administrative tools, discussions, moderation workflows, and dynamically generated system areas.
+
+2. Are there specific rules for certain user agents?
+
+Yes. Wikipedia provides different rules for different bots:
+
+Examples:
+
+Some bots are completely blocked:
+
+User-agent: MJ12bot
+Disallow: /
+
+
+Many known aggressive or copy-site bots are blocked:
+
+HTTrack
+WebCopier
+Offline Explorer
+etc.
+
+Some bots have rate limits instead of a full block:
+
+User-agent: SemrushBot
+Crawl-delay: 5
+
+
+General rule for all bots:
+
+User-agent: *
+
+followed by many Disallow paths.
+
+So yes — Wikipedia applies bot-specific restrictions depending on behavior.
+
+3. Why websites use robots.txt 
+
+Websites use robots.txt to guide automated bots on which parts of a site should 
+or should not be accessed. It helps protect server resources, prevents bots from 
+overloading dynamic or administrative pages, and keeps sensitive or internal 
+workflows from being indexed. By following robots.txt rules, developers practice 
+ethical web scraping and respect the intentions of website owners.
