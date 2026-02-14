@@ -1,0 +1,21 @@
+TASK 1
+
+Robots.txt Review — Durham County Library
+The robots.txt file contains the following rule:
+
+User-agent: *
+Disallow: /staff/
+
+This means that all automated crawlers are restricted from accessing any 
+URLs under the /staff/ directory. These pages are likely intended for internal 
+staff use and are not meant to be accessed by bots.
+The web scraping activity in this assignment targets public search result 
+pages (e.g., /v2/search?...), which are not part of the restricted /staff/ directory. 
+Therefore, the scraping performed in this assignment complies with the website’s robots.txt policy.
+_____________________________________________
+
+TASK 2
+li class="row cp-search-result-item"
+span class="title-content"
+a class="author-link"
+span class="display-info-primary"

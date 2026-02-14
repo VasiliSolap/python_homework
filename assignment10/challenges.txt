@@ -1,0 +1,16 @@
+    In this assignment I had some challenges while learning web scraping.
+    First, it was hard to understand the HTML structure of the Durham Library website. 
+There were many nested div elements and long class names. I used the browser 
+Inspect tool and slowly moved up the DOM tree to find the correct <li> element 
+for one book. After that, I could find the title, authors, and format.
+
+    Another challenge was scraping the OWASP Top 10 page. At first I tried to select 
+links by text, but it also found extra links that were not vulnerabilities. 
+I fixed this by selecting links by URL pattern using this XPath:
+
+//main//a[contains(@href, "/Top10/2025/A")]
+
+This worked better because all real vulnerabilities have similar links.
+
+    I also had a small problem because the page loads with JavaScript. Sometimes elements 
+were not found. Adding a short delay helped the page load fully.
